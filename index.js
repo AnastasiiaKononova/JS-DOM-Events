@@ -1,6 +1,10 @@
-const button = document.getElementById("my-button");
-button.addEventListener('click', clicker);
 
-function clicker(){
-    alert('Привіт тобі, клацальщик!');
-}
+const link = document.getElementById('createBtnLink');
+const buttonContainer = document.getElementById('btnContainer');
+
+
+link.addEventListener('click', function() {
+  const newBtn = document.createElement('button');
+  newBtn.textContent = 'Нова кнопка';
+  buttonContainer.append(newBtn);
+});
