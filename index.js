@@ -1,10 +1,10 @@
+const lamp = document.getElementById('lamp');
+const button = document.getElementById('change-lamp');
 
-const link = document.getElementById('createBtnLink');
-const buttonContainer = document.getElementById('btnContainer');
+button.addEventListener('click', clicker);
 
-
-link.addEventListener('click', function() {
-  const newBtn = document.createElement('button');
-  newBtn.textContent = 'Нова кнопка';
-  buttonContainer.append(newBtn);
-});
+function clicker () {
+    lamp.style.backgroundColor = (lamp.style.backgroundColor === 'lightgray') ? 'yellow' : 'lightgray';
+    lamp.style.borderColor = (lamp.style.backgroundColor === 'yellow') ? 'white' : 'darkgray';
+    button.textContent = (lamp.style.backgroundColor === 'yellow') ? 'Вимкнути лампочку' : 'Увімкнути лампочку';
+};
